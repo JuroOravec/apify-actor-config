@@ -35,6 +35,8 @@
     "build:all": "npm run build:cjs && npm run build:esm",
     "build:cjs": "npm run build:version && tsc -p tsconfig.cjs.json",
     "build:esm": "npm run build:version && tsc -p tsconfig.esm.json",
+    "build:examples": "npm run build && tsc -p tsconfig.examples.json",
+    "build:examples:actor": "node dist/cjs/cli/index.js gen -c ./dist/examples/config.js -o ./examples",
     "build:version": "npx genversion src/version.js ",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
@@ -44,6 +46,8 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
+    "apify": "^3.1.4",
+    "crawlee": "^3.3.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.4.1",
