@@ -57,7 +57,7 @@ export const generate = async ({
 
   const jsonConfig = JSON.stringify(resolvedConfig, null, 2);
 
-  const outDirUsed = outDir || fs.existsSync(absPath('./.actor')) ? './.actor' : '.';
+  const outDirUsed = outDir ? outDir : fs.existsSync(absPath('./.actor')) ? './.actor' : '.';
   const absOutDirPath = absPath(outDirUsed);
   const absOutFilePath = path.resolve(absOutDirPath, 'actor.json');
   log(`Writing resolved config to file ${absOutFilePath}`);
