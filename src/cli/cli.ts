@@ -1,5 +1,6 @@
 import { program } from 'commander';
 
+import packageJson from '../../package.json';
 import { generate } from './commands';
 
 interface CLIOptions {
@@ -13,7 +14,7 @@ interface CLIOptions {
 program
   .name('apify-actor-config')
   .description('Utils for working with Apify actor config')
-  .version('0.8.0'); // TODO
+  .version(packageJson.version);
 
 program
   .command('gen', 'generate actor.json config from a .js file')
