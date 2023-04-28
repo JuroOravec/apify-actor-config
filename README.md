@@ -87,7 +87,9 @@ export default config;
 
 If you use TS, first compile the project.
 
-Then generate `actor.json` file with:
+Then generate `actor.json` file with `apify-actor-config gen` command.
+
+Use `-c` or `--config` option to specify path to config JS file:
 
 ```sh
 npx apify-actor-config gen -c ./path/to/config.js
