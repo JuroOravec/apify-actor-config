@@ -1,6 +1,6 @@
 import { program } from 'commander';
 
-import version from '../../version';
+import version from './../version';
 import { generate } from './commands';
 
 interface CLIOptions {

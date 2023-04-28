@@ -35,7 +35,7 @@
     "build:all": "npm run build:cjs && npm run build:esm",
     "build:cjs": "npm run build:version && tsc -p tsconfig.cjs.json",
     "build:esm": "npm run build:version && tsc -p tsconfig.esm.json",
-    "build:version": "npx genversion version.js ",
+    "build:version": "npx genversion src/version.js ",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
     "test": "vitest run",
