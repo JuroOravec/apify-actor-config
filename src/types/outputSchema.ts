@@ -29,7 +29,7 @@ export interface ActorOutputSchema<
    * The version of the specification against which your schema is written.
    * Currently, only version 1 is out.
    */
-  schemaVersion: 1;
+  actorSpecification: 1;
   /**
    * Schema of one dataset object. Use JsonSchema Draft 2020-12
    * or other compatible formats.

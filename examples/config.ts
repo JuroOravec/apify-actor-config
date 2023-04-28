@@ -164,7 +164,7 @@ const inputSchema = createActorInputSchema<ActorInputSchema<Record<keyof ActorIn
 });
 
 const outputSchema = createActorOutputSchema({
-  schemaVersion: 1,
+  actorSpecification: 1,
   fields: {
     /** ... */
   },

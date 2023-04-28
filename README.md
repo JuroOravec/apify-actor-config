@@ -59,7 +59,7 @@ const inputSchema = createActorInputSchema<ActorInputSchema<Record<keyof ActorIn
 
 // Define output schema
 const outputSchema = createActorOutputSchema({
-  schemaVersion: 1,
+  actorSpecification: 1,
   fields: {
     /** ... */
   },
@@ -77,6 +77,9 @@ const config = createActorConfig({
   version: '0.1',
   dockerfile: './Dockerfile',
   input: inputSchema,
+  storages: { 
+    dataset: outputSchema,
+  }
 });
 
 // IMPORTANT: Export as default

@@ -116,7 +116,7 @@
   },
   "storages": {
     "dataset": {
-      "schemaVersion": 1,
+      "actorSpecification": 1,
       "fields": {},
       "views": {}
     }
