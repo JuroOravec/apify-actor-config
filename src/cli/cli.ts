@@ -14,7 +14,14 @@ interface CLIOptions {
 program
   .name('apify-actor-config')
   .description('Utils for working with Apify actor config')
-  .version(version);
+  .version(version)
+  .addHelpText(
+    'after',
+    `
+
+Example call:
+  $ apify-actor-config gen -c ./actor.js -o ./.actor/actor.json`
+  );
 
 program
   .command('gen', 'generate actor.json config from a .js file')
