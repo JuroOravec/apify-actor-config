@@ -25,6 +25,7 @@ Example call:
 
 program
   .command('gen')
+  .description('Generate actor.json from given js config file')
   .option('-c, --config <config-path>', 'path to actor config')
   .option(
     '-o, --out-dir [output-path]',
