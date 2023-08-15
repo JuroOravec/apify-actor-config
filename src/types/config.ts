@@ -19,6 +19,9 @@ export interface ActorConfig<
   /** The tag name applied for the successful build of the Actor. Defaults to `latest` */
   buildTag?: string;
   /**
+   * A map of environment variables used during the local development that will be also applied to
+   * Actor at Apify platform.
+   *
    * @example
    * {
    *   MYSQL_USER: 'my_username',
