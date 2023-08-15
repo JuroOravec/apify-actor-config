@@ -13,10 +13,10 @@ export interface ActorConfig<
    */
   actorSpecification: 1;
   /** Name of the scraper */
-  name?: string;
-  /** e.g. '0.0' */
-  version?: string;
-  /** e.g. 'latest' */
+  name: string;
+  /** Actor version in the form [Number].[Number], i.e. for example `0.0`, `0.1`, `2.3`, ... */
+  version: string;
+  /** The tag name applied for the successful build of the Actor. Defaults to `latest` */
   buildTag?: string;
   /**
    * @example
