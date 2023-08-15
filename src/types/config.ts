@@ -36,6 +36,12 @@ export interface ActorConfig<
    */
   dockerfile?: string;
   /**
+   * Specifies the path to the directory used as the Docker context when building
+   * the Actor. The path is relative to the location of the actor.json file. Useful
+   * for having a monorepo with multiple Actors.
+   */
+  dockerContextDir?: string;
+  /**
    * If you specify the path to your README file under the readme field, the README
    * at this path will be used on the platform. If not specified,
    * README at .actor/README.md or README.md will be used, in this order of preference.
@@ -64,6 +70,18 @@ export interface ActorConfig<
      */
     dataset?: string | TOutputSchema;
   };
+  /**
+   * Specifies the minimum amount of memory in megabytes that an Actor requires to run.
+   * Requires an integer value. If both minMemoryMbytes and maxMemoryMbytes are set, then
+   * minMemoryMbytes must be the same or lower than maxMemoryMbytes.
+   */
+  minMemoryMbytes?: number;
+  /**
+   * Specifies the maximum amount of memory in megabytes that an Actor requires to run.
+   * It can be used to control the costs of run, especially when developing pay per result
+   * actors. Requires an integer value.
+   */
+  maxMemoryMbytes?: number;
   meta?: object;
 }
 
